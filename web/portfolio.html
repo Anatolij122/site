@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфоліо</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .gallery a {
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .gallery a:hover {
+      border-color: #666;
+    }
+    .gallery img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+    .caption {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 5px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Портфоліо</h1>
+  <div class="gallery">
+    <div>
+        <a href="https://www.figma.com/design/2fpGlEKjJ7WJrt6XpYRalG/Untitled?node-id=0-1&t=LwKkuuEszuZZR26K-1" target="_blank">
+        <img src="ll1.png" width="200" height="200" alt="Робота 1">
+      </a>
+      <p class="caption">Робота 1</p>
+    </div>
+    <div>
+      <a href="https://www.figma.com/design/2fpGlEKjJ7WJrt6XpYRalG/Untitled?node-id=4-3&t=LwKkuuEszuZZR26K-1" target="_blank">
+        <img src="ll4.png" width="200" height="200" alt="Робота 2">
+      </a>
+      <p class="caption">Робота 2</p>
+    </div>
+    <div>
+      <a href="http://6710c5306a6b5.site123.me/" target="_blank">
+        <img src="ll2.png" alt="Робота 3">
+      </a>
+      <p class="caption">Робота 3</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація нового користувача</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.5;
+        }
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid rgb(79, 71, 71);
+            border-radius: 5px;
+        }
+        .form-container h1 {
+            text-align: center;
+            font-size: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .required {
+            color: red;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgb(109, 101, 101);
+            border-radius: 5px;
+        }
+        .gender, .education {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Реєстрація нового користувача</h1>
+        <p><span class="required">Обов'язкові поля виділені червоним кольором</span></p>
+        <form>
+            <label for="login">Логін (псевдонім): <span class="required">*</span></label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="email">E-mail: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль (не менше 6 сим.): <span class="required">*</span></label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <label for="confirm-password">Підтвердить пароль: <span class="required">*</span></label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname">
+
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="patronymic">По батькові:</label>
+            <input type="text" id="patronymic" name="patronymic">
+
+            <label for="birthdate">Дата народження:</label>
+            <div>
+                <select id="day" name="day">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+
+                    
+                </select>
+                <select id="month" name="month">
+                    <option value="січень">січень</option>
+                    <option value="лютий">люий</option>
+                    <option value="березень">березень</option>
+                    <option value="квітень">квітень</option>
+                    <option value="травень">травень</option>
+                    <option value="червень">червень</option>
+                    <option value="липень">липень</option>
+                    <option value="серпень">серпень</option>
+                    <option value="вересень">вересень</option>
+                    <option value="жоветнь">жоветнь</option>
+                    <option value="листопад">листопад</option>
+                    <option value="грудень">грудень</option>
+
+
+
+
+                    <!-- Додати всі місяці -->
+                </select>
+                <select id="year" name="year">
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <!-- Додати всі роки -->
+                </select>
+            </div>
+
+            <label>Стать:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="чоловіча"> Чоловіча</label>
+                <label><input type="radio" name="gender" value="жіноча"> Жіноча</label>
+            </div>
+
+            <label for="city">Місто проживання:</label>
+            <input type="text" id="city" name="city">
+
+            <label>Освіта:</label>
+            <div class="education">
+                <label><input type="radio" name="education" value="вища"> Вища</label>
+                <label><input type="radio" name="education" value="незакінчена"> Незакінчена вища</label>
+                <label><input type="radio" name="education" value="спеціальна"> Середня спеціальна</label>
+                <label><input type="radio" name="education" value="середня"> Середня</label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Зареєструватися</button>
+                <button type="reset">Очистити форму</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
